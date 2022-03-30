@@ -11,6 +11,7 @@ module.exports = {
       input: {
         main: resolve(__dirname, root, "index.html"),
         boxAndPlane: resolve(__dirname, root, "boxAndPlane/index.html"),
+        guiPlane: resolve(__dirname, root, "guiPlane/index.html"),
       },
     },
   },
