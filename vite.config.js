@@ -12,6 +12,7 @@ module.exports = {
         main: resolve(__dirname, root, "index.html"),
         boxAndPlane: resolve(__dirname, root, "boxAndPlane/index.html"),
         guiPlane: resolve(__dirname, root, "guiPlane/index.html"),
+        hoverPlane: resolve(__dirname, root, "hoverPlane/index.html"),
       },
     },
   },
