@@ -3,19 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="./style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <div style="display: flex; justify-content: center">
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+      "
+    >
+      <a href="https://www.youtube.com/watch?v=YK1Sw_hnm58" style="color: black"
+        >Chris Course's three.js tutorial crash course</a
+      >
       <ul>
-        <li><a href="/boxAndPlane/index.html">box and plane</a></li>
-        <li><a href="/guiPlane/index.html">gui plane</a></li>
-        <li><a href="/hoverPlane/index.html">hover plane</a></li>
-        <li><a href="/tailorHoverEffect/index.html">tailor hover effect</a></li>
+        <li>
+          <a href="/chrisTutorial/boxAndPlane/index.html">box and plane</a>
+        </li>
+        <li><a href="/chrisTutorial/guiPlane/index.html">gui plane</a></li>
+        <li><a href="/chrisTutorial/hoverPlane/index.html">hover plane</a></li>
+      </ul>
+      <a href="https://ics.media/tutorial-three/" style="color: black"
+        >ics.media Three.js 入門サイト</a
+      >
+      <ul>
+        <li>
+          <a href="/icsTutorial/introduction/index.html">入門編</a>
+        </li>
       </ul>
     </div>
-    <script type="module" src="./main.ts"></script>
   </body>
 </html>

@@ -10,9 +10,22 @@ module.exports = {
     rollupOptions: {
       input: {
         main: resolve(__dirname, root, "index.html"),
-        boxAndPlane: resolve(__dirname, root, "boxAndPlane/index.html"),
-        guiPlane: resolve(__dirname, root, "guiPlane/index.html"),
-        hoverPlane: resolve(__dirname, root, "hoverPlane/index.html"),
+        boxAndPlane: resolve(
+          __dirname,
+          root,
+          "chrisTutorial/boxAndPlane/index.html"
+        ),
+        guiPlane: resolve(__dirname, root, "chrisTutorial/guiPlane/index.html"),
+        hoverPlane: resolve(
+          __dirname,
+          root,
+          "chrisTutorial/hoverPlane/index.html"
+        ),
+        introdution: resolve(
+          __dirname,
+          root,
+          "icsTutorial/introduction/index.html"
+        ),
       },
     },
   },
