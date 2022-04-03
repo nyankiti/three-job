@@ -26,6 +26,12 @@ module.exports = {
           root,
           "icsTutorial/introduction/index.html"
         ),
+        meterialAndLighting: resolve(
+          __dirname,
+          root,
+          "icsTutorial/materialAndLighting/index.html"
+        ),
+        geometry: resolve(__dirname, root, "icsTutorial/geometry/index.html"),
       },
     },
   },
