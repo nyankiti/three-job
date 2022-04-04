@@ -1,0 +1,103 @@
+import * as THREE from "three";
+const width = window.innerWidth;
+const height = window.innerHeight;
+let rot = 0;
+
+// レンダラーを作成
+const renderer = new THREE.WebGLRenderer({
+  canvas: document.querySelector("#myCanvas") as HTMLCanvasElement,
+});
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(width, height);
+
+// シーンを作成
+const scene = new THREE.Scene();
+
+// カメラを作成
+const camera = new THREE.PerspectiveCamera(45, width / height);
+camera.position.set(100, 150, 500);
+camera.lookAt(new THREE.Vector3(0, 0, 0));
+
+// 地面を作成
+const plane2 = new THREE.GridHelper(600);
+scene.add(plane2);
+const plane = new THREE.AxesHelper(300);
+scene.add(plane);
+
+const group = new THREE.Group();
+scene.add(group);
+
+let targetMesh = new THREE.Mesh();
+
+for (let i = 0; i < 10; i++) {
+  // 直方体を作成
+  const material =
+    i === 0 ? new THREE.MeshNormalMaterial() : new THREE.MeshBasicMaterial();
+  const geometry = new THREE.SphereGeometry(30, 30, 30);
+  const mesh = new THREE.Mesh(geometry, material);
+  const radian = (i / 10) * Math.PI * 2;
+  mesh.position.set(200 * Math.cos(radian), 0, 200 * Math.sin(radian));
+  group.add(mesh);
+
+  if (i === 0) {
+    targetMesh = mesh;
+  }
+}
+
+// ライン
+// const geometry = new THREE.Geometry();
+// geometry.vertices.push(
+//   new THREE.Vector3(0, 0, 0),
+//   new THREE.Vector3(0, 0, 0)
+// );
+// const line = new THREE.Line(geometry, new THREE.LineBasicMaterial());
+// scene.add(line);
+
+const geometry = new THREE.BufferGeometry().setFromPoints([
+  new THREE.Vector3(0, 0, 0),
+  new THREE.Vector3(50, 50, 0),
+]);
+const line = new THREE.Line(geometry, new THREE.LineBasicMaterial());
+scene.add(line);
+
+tick();
+
+// 毎フレーム時に実行されるループイベントです
+function tick() {
+  group.rotation.x += 0.02;
+  group.rotation.y += 0.01;
+
+  // ワールド座標を取得
+  const world = targetMesh.getWorldPosition(new THREE.Vector3());
+
+  // ラインを更新
+  const positions = line.geometry.attributes.position.array as Array<number>;
+  positions[0] = 0; // 1番目頂点のX座標
+  positions[1] = 0; // 1番目頂点のY座標
+  positions[2] = 0; // 1番目頂点のZ座標
+  positions[3] = world.x; // 2番目頂点のX座標
+  positions[4] = world.y; // 2番目頂点のY座標
+  positions[5] = world.z; // 2番目頂点のZ座標
+  line.geometry.attributes.position.needsUpdate = true;
+
+  // レンダリング
+  renderer.render(scene, camera);
+
+  requestAnimationFrame(tick);
+}
+
+window.addEventListener("resize", onResize);
+
+function onResize() {
+  // サイズを取得
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  // レンダラーのサイズを調整する
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(width, height);
+
+  // カメラのアスペクト比を正す
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+}

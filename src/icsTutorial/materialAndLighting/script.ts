@@ -2,8 +2,8 @@ import * as THREE from "three";
 import Earth from "./earth.jpg";
 
 // サイズを指定
-const width = 960;
-const height = 540;
+const width = window.innerWidth;
+const height = window.innerHeight;
 
 // レンダラーを作成
 const renderer = new THREE.WebGLRenderer({
@@ -53,4 +53,20 @@ function tick() {
   renderer.render(scene, camera);
 
   requestAnimationFrame(tick);
+}
+
+window.addEventListener("resize", onResize);
+
+function onResize() {
+  // サイズを取得
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  // レンダラーのサイズを調整する
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(width, height);
+
+  // カメラのアスペクト比を正す
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
 }

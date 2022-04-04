@@ -2,8 +2,8 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import Earth from "./earth.jpg";
 
-const width = 960;
-const height = 540;
+const width = window.innerWidth;
+const height = window.innerHeight;
 
 const canvasElement = document.querySelector("#myCanvas") as HTMLCanvasElement;
 // レンダラーを作成
@@ -92,4 +92,20 @@ function tick() {
   renderer.render(scene, camera);
 
   requestAnimationFrame(tick);
+}
+
+window.addEventListener("resize", onResize);
+
+function onResize() {
+  // サイズを取得
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  // レンダラーのサイズを調整する
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(width, height);
+
+  // カメラのアスペクト比を正す
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
 }

@@ -42,6 +42,7 @@ module.exports = {
           root,
           "icsTutorial/cameraOrbitControl/index.html"
         ),
+        group: resolve(__dirname, root, "icsTutorial/group/index.html"),
       },
     },
   },
