@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import Earth from "./earth.png";
+import Earth from "./earth.jpg";
 
 // サイズを指定
 const width = 960;

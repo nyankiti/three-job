@@ -32,6 +32,16 @@ module.exports = {
           "icsTutorial/materialAndLighting/index.html"
         ),
         geometry: resolve(__dirname, root, "icsTutorial/geometry/index.html"),
+        cameraCoordinateControll: resolve(
+          __dirname,
+          root,
+          "icsTutorial/cameraCoordinateControl/index.html"
+        ),
+        cameraOrbitControll: resolve(
+          __dirname,
+          root,
+          "icsTutorial/cameraOrbitControl/index.html"
+        ),
       },
     },
   },
