@@ -43,6 +43,18 @@ module.exports = {
           "icsTutorial/cameraOrbitControl/index.html"
         ),
         group: resolve(__dirname, root, "icsTutorial/group/index.html"),
+        worldCoordinate: resolve(
+          __dirname,
+          root,
+          "icsTutorial/worldCoordinate/index.html"
+        ),
+        raycast: resolve(__dirname, root, "icsTutorial/raycast/index.html"),
+        particle: resolve(__dirname, root, "icsTutorial/particle/index.html"),
+        // mergeGeometry: resolve(
+        //   __dirname,
+        //   root,
+        //   "icsTutorial/mergeGeometry/index.html"
+        // ),
       },
     },
   },
