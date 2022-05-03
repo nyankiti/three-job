@@ -11,7 +11,7 @@ const sizes = {
 };
 
 // Canvas
-const canvas = document.querySelector(".webgl");
+const canvas = document.querySelector(".webgl") as HTMLCanvasElement;
 
 // Scene
 const scene = new THREE.Scene();
@@ -25,7 +25,7 @@ const textureLoader = new THREE.TextureLoader();
 const geometry = new THREE.PlaneGeometry(1, 1, 32, 32);
 
 // Material
-const material = new THREE.MeshBasicMaterial();
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 
 // Mesh
 const mesh = new THREE.Mesh(geometry, material);
