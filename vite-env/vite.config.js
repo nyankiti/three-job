@@ -10,6 +10,17 @@ module.exports = {
     rollupOptions: {
       input: {
         main: resolve(__dirname, root, "index.html"),
+        smcaruso: resolve(__dirname, root, "smcaruso/index.html"),
+        subdividePlane: resolve(
+          __dirname,
+          root,
+          "WealYasminaTutorial/subdividePlane/index.html"
+        ),
+        cameraMovement: resolve(
+          __dirname,
+          root,
+          "WealYasminaTutorial/cameraMovement/index.html"
+        ),
         boxAndPlane: resolve(
           __dirname,
           root,

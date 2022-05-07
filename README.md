@@ -4,6 +4,14 @@
 
 - https://threejs.org/
 
+参考にさせていただいた開発者様
+
+- [Youtube channel "Weal Yasmina"](https://www.youtube.com/channel/UC1q2FdkcQ4qIxXzj3KQ1HYA)
+
+  - [Weal Yasmina 様 の github](https://github.com/WaelYasmina)
+
+- [Youtube channel "Chris Courses"](https://www.youtube.com/channel/UC9Yp2yz6-pwhQuPlIDV_mjA)
+
 わかりやすい tutorial
 
 - https://ics.media/tutorial-three/
