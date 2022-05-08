@@ -49,6 +49,8 @@ export default class App {
     this.displayMeshes = new DisplayMeshes();
     this.raycaster = new THREE.Raycaster();
 
+    console.log(this.time);
+
     // event emitterのonメソッドの第二引数で、追加したい処理を追加できる
     this.sizes.on("resize", () => {
       this.resize();

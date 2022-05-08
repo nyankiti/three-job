@@ -16,6 +16,16 @@ module.exports = {
           root,
           "WealYasminaTutorial/subdividePlane/index.html"
         ),
+        GLTFmodelGui: resolve(
+          __dirname,
+          root,
+          "WealYasminaTutorial/GLTFmodelGui/index.html"
+        ),
+        cloneGLTFmodel: resolve(
+          __dirname,
+          root,
+          "WealYasminaTutorial/cloneGLTFmodel/index.html"
+        ),
         cameraMovement: resolve(
           __dirname,
           root,
