@@ -84,10 +84,10 @@ export default class App {
       // highlightを点滅させる
       const elapsed_time = this.time.elapsed;
       this.displayMeshes.highlightMesh.material.opacity =
-        1 + Math.sin(elapsed_time / 120);
+        1 + Math.sin(elapsed_time / 160);
 
       this.displayMeshes.mixers.forEach((mixer) => {
-        mixer.update(this.time.delta / 1000);
+        mixer.update(this.time.delta);
       });
 
       this.renderer.update();

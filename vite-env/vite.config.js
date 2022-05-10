@@ -21,6 +21,11 @@ module.exports = {
           root,
           "WealYasminaTutorial/GLTFmodelGui/index.html"
         ),
+        kingHall: resolve(
+          __dirname,
+          root,
+          "WealYasminaTutorial/KingHall/index.html"
+        ),
         cloneGLTFmodel: resolve(
           __dirname,
           root,
@@ -30,6 +35,11 @@ module.exports = {
           __dirname,
           root,
           "WealYasminaTutorial/cameraMovement/index.html"
+        ),
+        loadingMarsSurface: resolve(
+          __dirname,
+          root,
+          "WealYasminaTutorial/loadingMarsSurface/index.html"
         ),
         boxAndPlane: resolve(
           __dirname,

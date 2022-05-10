@@ -115,6 +115,8 @@ export default class DisplayMeshes {
     const clip = THREE.AnimationClip.findByName(this.clips, "Idle_2");
     const action = mixer.clipAction(clip);
     action.play();
+    // 動くスピードをtimeScaleで調整できる
+    action.timeScale = 0.001;
     this.mixers.push(mixer);
   }
 }
