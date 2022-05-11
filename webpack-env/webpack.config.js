@@ -1,6 +1,6 @@
 module.exports = {
   mode: "development",
-  entry: "./src/index.ts",
+  entry: "./src-flag/index.ts",
   output: {
     // 出力ファイルのディレクトリ名
     path: `${__dirname}/dist`,
@@ -73,6 +73,8 @@ module.exports = {
       //Shader
       {
         test: /\.(glsl|vs|fs|vert|frag)$/,
+        // ts-shader-loaderを用いるとshaderがsyntaxエラーしてしまう、、、、
+        // use: ["ts-shader-loader"],
         type: "asset/source",
         generator: {
           filename: "assets/images/[hash][ext]",
