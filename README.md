@@ -12,6 +12,11 @@
 
 - [Youtube channel "Chris Courses"](https://www.youtube.com/channel/UC9Yp2yz6-pwhQuPlIDV_mjA)
 
+Shin code 様
+
+- [Udemy 講座](https://www.udemy.com/course/threejs-shader-glsl/)
+- [github](https://github.com/Shin-sibainu/)
+
 わかりやすい tutorial
 
 - https://ics.media/tutorial-three/

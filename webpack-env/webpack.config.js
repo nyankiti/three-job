@@ -1,6 +1,6 @@
 module.exports = {
   mode: "development",
-  entry: "./src-flag/index.ts",
+  entry: "./src-sea/index.ts",
   output: {
     // 出力ファイルのディレクトリ名
     path: `${__dirname}/dist`,
