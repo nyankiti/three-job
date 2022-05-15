@@ -24,7 +24,7 @@ module.exports = {
         kingHall: resolve(
           __dirname,
           root,
-          "WealYasminaTutorial/KingHall/index.html"
+          "WealYasminaTutorial/kingHall/index.html"
         ),
         cloneGLTFmodel: resolve(
           __dirname,
