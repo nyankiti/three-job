@@ -87,11 +87,11 @@ module.exports = {
           "shaderPractice/raw-shader/index.html"
         ),
         shaderSea: resolve(__dirname, root, "shaderPractice/sea/index.html"),
-        // mergeGeometry: resolve(
-        //   __dirname,
-        //   root,
-        //   "icsTutorial/mergeGeometry/index.html"
-        // ),
+        shaderImageLimping: resolve(
+          __dirname,
+          root,
+          "shaderPractice/image-limping/index.html"
+        ),
       },
     },
   },
