@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        overflow: hidden;
+        color: white;
+      }
+
+      .webgl {
+        position: fixed;
+        top: 0;
+        left: 0;
+        outline: none;
+        z-index: -1;
+      }
+
+      /* スタイリング */
+      header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .logo {
+        font-size: 35px;
+      }
+      header ul {
+        list-style: none;
+      }
+
+      header ul li {
+        display: inline-block;
+        margin-right: 25px;
+      }
+
+      header ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 500;
+      }
+
+      main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      main h1 {
+        font-size: 5rem;
+        white-space: nowrap;
+        margin-bottom: 20px;
+      }
+      main p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas class="webgl"></canvas>
+
+    <header>
+      <h3 class="logo">Shader.com</h3>
+      <ul>
+        <li><a href="#">ホーム</a></li>
+        <li><a href="#">ブログ</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+    </header>
+    <main>
+      <h1>Dive Into Deep..</h1>
+      <p>Three.jsのもっと深みへ</p>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

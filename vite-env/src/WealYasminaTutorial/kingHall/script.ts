@@ -5,12 +5,11 @@ import { FirstPersonControls } from "three/examples/jsm/controls/FirstPersonCont
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import gsap from "gsap";
 
-const gltfUrl = new URL("./assets/the_king_s_hall/scene.gltf", import.meta.url);
-new URL("./assets/the_king_s_hall/scene.bin", import.meta.url);
-new URL(
-  "./assets/the_king_s_hall/textures/model_Material_u1_v1_baseColor.jpeg",
-  import.meta.url
-);
+/* assets */
+import gltfUrl from "./assets/the_king_s_hall/scene.gltf?url";
+// import gltfBin from "./assets/the_king_s_hall/scene.bin?url";
+// import Material from "./assets/the_king_s_hall/textures/model_Material_u1_v1_baseColor.jpeg?url";
+
 // サイズを取得
 const width = window.innerWidth;
 const height = window.innerHeight;
@@ -62,7 +61,7 @@ renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
 let postition = 0;
 
-gltfLoader.load(gltfUrl.href, (gltf) => {
+gltfLoader.load(gltfUrl, (gltf) => {
   const model = gltf.scene;
   scene.add(model);
 

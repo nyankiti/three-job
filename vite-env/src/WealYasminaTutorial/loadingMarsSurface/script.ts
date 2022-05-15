@@ -3,14 +3,9 @@ import { FirstPersonControls } from "three/examples/jsm/controls/FirstPersonCont
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader";
 
-const gltfUrl = new URL(
-  "./assets/mars_one_mission_-_base/scene.gltf",
-  import.meta.url
-);
-const hdrUrl = new URL(
-  "./assets/MR_INT-006_LoftIndustrialWindow_Griffintown.hdr",
-  import.meta.url
-);
+/* assets */
+import gltfUrl from "./assets/mars_one_mission_-_base/scene.gltf?url";
+import hdrUrl from "./assets/MR_INT-006_LoftIndustrialWindow_Griffintown.hdr?url";
 
 // サイズを取得
 const width = window.innerWidth;
@@ -57,11 +52,11 @@ const rgbeLoader = new RGBELoader();
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
-rgbeLoader.load(hdrUrl.href, (texture) => {
+rgbeLoader.load(hdrUrl, (texture) => {
   texture.mapping = THREE.EquirectangularReflectionMapping;
   scene.environment = texture;
 
-  gltfLoader.load(gltfUrl.href, (gltf) => {
+  gltfLoader.load(gltfUrl, (gltf) => {
     const model = gltf.scene;
     scene.add(model);
   });

@@ -80,7 +80,13 @@ module.exports = {
           "icsTutorial/worldCoordinate/index.html"
         ),
         raycast: resolve(__dirname, root, "icsTutorial/raycast/index.html"),
-        particle: resolve(__dirname, root, "icsTutorial/particle/index.html"),
+        shaderFlag: resolve(__dirname, root, "shaderPractice/flag/index.html"),
+        shaderRaw: resolve(
+          __dirname,
+          root,
+          "shaderPractice/raw-shader/index.html"
+        ),
+        shaderSea: resolve(__dirname, root, "shaderPractice/sea/index.html"),
         // mergeGeometry: resolve(
         //   __dirname,
         //   root,
