@@ -41,6 +41,11 @@ module.exports = {
           root,
           "WealYasminaTutorial/loadingMarsSurface/index.html"
         ),
+        scrollAndRaycasting: resolve(
+          __dirname,
+          root,
+          "scroll/scrollAndRaycasting/index.html"
+        ),
         boxAndPlane: resolve(
           __dirname,
           root,
